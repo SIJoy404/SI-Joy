@@ -628,7 +628,7 @@ h3 span.my-profession {
   border-radius: 10px;
   padding: 30px 15px;
   text-align: center;
-  transition: all 0.35 ease;
+  transition: all 0.3s ease;
 }
 
 .service .service-item .service-item-inner:hover {
@@ -809,51 +809,103 @@ h3 span.my-profession {
   font-size: 30px;
 }
 
-/* Animation
-@keyframes borderAnimation {
-  0% {
-    border-top-color: red;
-    border-right-color: orange;
-    border-bottom-color: yellow;
-    border-left-color: green;
-  }
-  16.67% {
-    border-top-color: orange;
-    border-right-color: yellow;
-    border-bottom-color: green;
-    border-left-color: blue;
-  }
-  33.33% {
-    border-top-color: yellow;
-    border-right-color: green;
-    border-bottom-color: blue;
-    border-left-color: indigo;
-  }
-  50% {
-    border-top-color: green;
-    border-right-color: blue;
-    border-bottom-color: indigo;
-    border-left-color: violet;
-  }
-  66.67% {
-    border-top-color: blue;
-    border-right-color: indigo;
-    border-bottom-color: violet;
-    border-left-color: red;
-  }
-  83.33% {
-    border-top-color: indigo;
-    border-right-color: violet;
-    border-bottom-color: red;
-    border-left-color: orange;
-  }
-  100% {
-    border-top-color: violet;
-    border-right-color: red;
-    border-bottom-color: orange;
-    border-left-color: yellow;
-  }
-} */
+/*Footer Start*/
+footer {
+  background-color: var(--bg-black-100);
+  padding: 20px 0;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 0 0 20%;
+  margin: 20px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  color: var(--text-black-900);
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.footer-section ul {
+  position: relative;
+  top: 10px;
+  left: 35px;
+  list-style-type: none;
+  line-height: 1.2;
+}
+
+.footer-section a {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  color: var(--text-black-700);
+  text-decoration: none;
+  border: 2px solid var(--bg-black-50);
+  border-radius: 10px;
+  padding: 10px 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.footer-section a:hover {
+  box-shadow: 0 0 30px var(--skin-color);
+  transform: scale(1.07);
+  transition: all 0.3s ease;
+}
+
+.footer-section :hover .fab {
+  font-size: 20px;
+  text-align: center;
+  top: 0px;
+  padding: 10px 5px;
+  color: #fff;
+  background: var(--skin-color);
+  transition: all 0.3s ease;
+}
+
+.footer-section .fab {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  top: 10px;
+}
+
+.footer-section .fab {
+  font-size: 30px;
+  line-height: 10px;
+  color: var(--skin-color);
+  transition: all 0.3s ease;
+}
+
+.footer-section .icons {
+  position: relative;
+  top: 15px;
+  left: 30px;
+}
+
+.footer-bottom {
+  color: var(--text-black-700);
+  padding: 10px 0;
+  margin-top: 30px;
+}
+
+/*Footer End*/
 
 /*Responsiveness*/
 
@@ -877,7 +929,7 @@ h3 span.my-profession {
   }
 
   .aside .nav-toggler.open {
-    left: 280px;
+    left: 270px;
   }
 
   .section {
@@ -930,10 +982,132 @@ h3 span.my-profession {
     max-width: 100%;
   }
 
+  .contact .contact-btn {
+    left: -10px;
+  }
+
   h3.hello span.name {
     font-size: 30px;
   }
   .about .about-content .about-text h3 span {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 389.98px) {
+  .contact .contact-form .col-6,
+  .contact .contact-info-item,
+  .portfolio .portfolio-item,
+  .service .service-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  h3.hello span.name {
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .about .about-content .about-text h3 span {
+    font-size: 18px;
+  }
+
+  .contact .contact-title {
+    color: var(--skin-color);
+    font-size: 20px;
+    text-align: left;
+    padding: 0;
+  }
+  .contact .contact-sub-title {
+    font-size: 15px;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .contact .contact-form .form-item .contact-btn {
+    width: 35%;
+    height: 15%;
+    font-size: 25px;
+  }
+
+  .row .contact-info-item {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+
+  .contact .contact-form {
+    font-size: 12px;
+    margin-right: 50px;
+    padding: 0;
+  }
+
+  .contact .contact-form .form-item .contact-btn {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 40%;
+  }
+
+  .portfolio .portfolio-item .portfolio-item-inner .portfolio-image img {
+    width: 60%;
+  }
+
+  .about .about-content .about-text {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  /* .about .about-content .about-text p {
+    font-size: 16px;
+    line-height: 15px;
+    color: var(--text-black-900);
+  } */
+
+  .about .about-content .timeline-box {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+
+  #cvDownload,
+  #hire-me,
+  .about .about-content .personal-info .info-item {
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .home-info p {
+    margin-bottom: 60px;
+    max-height: 100%;
+    font-size: 15px;
+    color: var(--text-black-700);
+  }
+
+  .service .service-item {
+    flex: 0 0 70%;
+    max-width: 70%;
+    margin: 15px 30px;
+  }
+
+  .portfolio .portfolio-item .portfolio-item-inner .portfolio-image img {
+    width: 75%;
+  }
+
+  .footer-container {
+    margin: 0;
+    padding: 0;
+    margin-right: 125px;
+  }
+
+  .footer-container .footer-section {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0;
+  }
+
+  .footer-bottom {
+    margin: 0;
+    padding: 0;
+    margin-right: 125px;
   }
 }
