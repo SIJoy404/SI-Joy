@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const cvButton = document.getElementById("cvDownload");
 
   cvButton.addEventListener("click", function () {
-    const pdfUrl = "CV/Joy_Cv_V_2.pdf";
+    const pdfUrl = "https://github.com/SIJoy404/SI-Joy/blob/74d78e0ecfc52dca993b310bf6d0c68bfc325fc9/CV/Joy_Cv_V_2.pdf";
     const pdfFilename = "SI_Joy_CV.pdf";
     downloadPdf(pdfUrl, pdfFilename);
   });
