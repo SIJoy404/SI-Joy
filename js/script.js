@@ -193,46 +193,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const contactForm = document.getElementById("contactForm");
 
-    contactForm.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the form from submitting normally
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the form from submitting normally
 
-        // Collect form data
-        const formData = new FormData(contactForm);
+    // Collect form data
+    const formData = new FormData(contactForm);
 
-        // Send form data via AJAX
-        fetch(contactForm.action, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                console.log('Success:', data);
+    // Send form data via AJAX
+    fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          console.log("Success:", data);
 
-                // Clear input fields after successful submission
-                clearFormInputs(contactForm);
+          // Clear input fields after successful submission
+          clearFormInputs(contactForm);
 
-                // Optionally, show a success message to the user
-                alert("Email sent successfully!");
-            } else {
-                console.error('Error:', data);
+          // Optionally, show a success message to the user
+          alert("Email sent successfully!");
+        } else {
+          console.error("Error:", data);
 
-                // Optionally, show an error message to the user
-                alert("There was an error sending the email.");
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
+          // Optionally, show an error message to the user
+          alert("There was an error sending the email.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
 
-            // Optionally, show an error message to the user
-            alert("There was an error sending the email.");
-        });
+        // Optionally, show an error message to the user
+        alert("There was an error sending the email.");
+      });
+  });
+
+  function clearFormInputs(form) {
+    const inputs = form.querySelectorAll("input, textarea");
+    inputs.forEach((input) => {
+      input.value = ""; // Clear input value
     });
+  }
 
-    function clearFormInputs(form) {
-        const inputs = form.querySelectorAll("input, textarea");
-        inputs.forEach(input => {
-            input.value = ""; // Clear input value
-        });
-    }
+  // Smooth scrolling for all anchor links with href starting with #
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      scrollToSection(targetId);
+    });
+  });
 });
