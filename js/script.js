@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
         'nav a[href="#' + sectionId + '"]'
       );
       activateNavLink(sectionLink);
-      section.scrollIntoView({ behavior: "smooth" });
+      scrollToTop(section);
     } else {
       console.error('Section with id "' + sectionId + '" not found');
     }
