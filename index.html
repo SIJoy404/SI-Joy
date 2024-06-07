@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SI Joy</title>
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
     <!------Css Item's------>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -15,32 +15,32 @@
     <!--=======Style Switcher=====-->
     <link
       rel="stylesheet"
-      href="css/skins/color_1.css"
+      href="/css/skins/color_1.css"
       class="alternate-style"
       title="color-1"
     />
     <link
       rel="stylesheet"
-      href="css/skins/color_2.css"
+      href="/css/skins/color_2.css"
       class="alternate-style"
       title="color-2"
       disabled
     />
     <link
       rel="stylesheet"
-      href="css/skins/color_3.css"
+      href="/css/skins/color_3.css"
       class="alternate-style"
       title="color-3"
       disabled
     />
     <link
       rel="stylesheet"
-      href="css/skins/color_4.css"
+      href="/css/skins/color_4.css"
       class="alternate-style"
       title="color-4"
       disabled
     />
-    <link rel="stylesheet" href="css/style-switcher.css" />
+    <link rel="stylesheet" href="/css/style-switcher.css" />
   </head>
 
   <body>
@@ -104,7 +104,7 @@
                 <a class="btn" id="contact-btn">Contact Me</a>
               </div>
               <div class="home-img padd-15">
-                <img src="images/tempHero.png" alt="Hero" />
+                <img src="/images/tempHero.png" alt="Hero" />
               </div>
             </div>
           </div>
@@ -217,7 +217,7 @@
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-image">
                     <img
-                      src="images/Portfolio/Portfoliyo-img-01.jpeg"
+                      src="/images/Portfolio/Portfoliyo-img-01.jpeg"
                       alt="Project-01"
                     />
                   </div>
@@ -228,7 +228,7 @@
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-image">
                     <img
-                      src="images/Portfolio/Portfoliyo-img-02.jpeg"
+                      src="/images/Portfolio/Portfoliyo-img-02.jpeg"
                       alt="Project-01"
                     />
                   </div>
@@ -239,7 +239,7 @@
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-image">
                     <img
-                      src="images/Portfolio/Portfolio-img-03.jpeg"
+                      src="/images/Portfolio/Portfolio-img-03.jpeg"
                       alt="Project-01"
                     />
                   </div>
@@ -250,7 +250,7 @@
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-image">
                     <img
-                      src="images/Portfolio/Portfolio-img-04.jpeg"
+                      src="/images/Portfolio/Portfolio-img-04.jpeg"
                       alt="Project-01"
                     />
                   </div>
@@ -261,7 +261,7 @@
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-image">
                     <img
-                      src="images/Portfolio/Portfoliyo-img-05.jpeg"
+                      src="/images/Portfolio/Portfoliyo-img-05.jpeg"
                       alt="Project-01"
                     />
                   </div>
@@ -272,7 +272,7 @@
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-image">
                     <img
-                      src="images/Portfolio/Portfoliyo-img-06.jpeg"
+                      src="/images/Portfolio/Portfoliyo-img-06.jpeg"
                       alt="Project-01"
                     />
                   </div>
@@ -296,7 +296,8 @@
                 <div class="row">
                   <div class="about-text padd-15">
                     <h3>
-                      I'm Soibul Islam Joy and
+                      I'm Soibul Islam Joy<br />
+                      <span class="text">and I'm a </span>
                       <span class="typing-2 my-profession-2"
                         >Web Developer</span
                       >
@@ -586,7 +587,7 @@
               <div class="contact-info-item">
                 <div class="icon"><i class="fa fa-globe-europe"></i></div>
                 <h4>Website</h4>
-                <p>sijoy404.github.io/SI-Joy/</p>
+                <p>sijoy404.github.io/SI-Joy</p>
               </div>
               <div class="contact-info-item">
                 <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
@@ -599,7 +600,11 @@
               I Will Try to Solve Your Problem(s)
             </h4>
             <!--Contact Form-->
-            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <form
+              id="contactForm"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
               <input
                 type="hidden"
                 name="access_key"
@@ -612,9 +617,10 @@
                       <div class="form-group">
                         <input
                           type="text"
-                          name = "Name"
+                          name="Name"
                           class="form-control"
                           placeholder="Name"
+                          autocomplete="name"
                           required
                         />
                       </div>
@@ -623,9 +629,10 @@
                       <div class="form-group">
                         <input
                           type="email"
-                          name = "Email"
+                          name="Email"
                           class="form-control"
                           placeholder="Email"
+                          autocomplete="email"
                           required
                         />
                       </div>
@@ -636,7 +643,7 @@
                       <div class="form-group">
                         <input
                           type="text"
-                          name = "Subject"
+                          name="Subject"
                           class="form-control"
                           placeholder="Subject"
                           required
@@ -668,9 +675,46 @@
                 </div>
               </div>
             </form>
+
+            <!-----Footer Section Start----->
+            <footer>
+              <div class="footer-container">
+                <div class="footer-section">
+                  <h4>Quick Links</h4>
+                  <hr />
+                  <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="footer-section social-icons">
+                  <h4>Follow Us</h4>
+                  <hr />
+                  <div class="icons">
+                    <a href="https://facebook.com" target="_blank"
+                      ><i class="fab fa-facebook"></i
+                    ></a>
+                    <a href="https://twitter.com" target="_blank"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a href="https://instagram.com" target="_blank"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-bottom">
+                <p>&copy; 2024 SI Joy. All rights reserved.</p>
+              </div>
+            </footer>
+            <!-----Footer Section End----->
           </div>
         </section>
         <!------Contact Section End------->
+
         <!------Style Switcher Start------>
 
         <div class="style-switcher">
